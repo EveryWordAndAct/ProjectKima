@@ -17,8 +17,7 @@ namespace Kima.Units
         public static GameObject CreateUnit(UnitNames name)
         {
             var unitObject = CreateUnit();
-
-            Debug.Log(string.Format(UnitSettingPathFormat, name));
+            
             var unitSetting = Resources.Load<UnitSetting>(string.Format(UnitSettingPathFormat, name));
 
             ObjectSpriteSetter.SetSprite(unitObject, unitSetting.Sprite);
