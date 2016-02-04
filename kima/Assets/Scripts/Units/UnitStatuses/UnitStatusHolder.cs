@@ -1,21 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Kima.Parameter;
 
 namespace Kima.Units.Statuses
 {
     public class UnitStatusHolder : MonoBehaviour
     {
         [SerializeField]
-        private UnitHp unitHp;
+        private ExpendParameter hp;
         [SerializeField]
-        private UnitMp unitMp;
+        private ExpendParameter mp;
 
-        public UnitHp UnitHp { get { return unitHp; } }
+        public ExpendParameter Hp { get { return hp; } }
+        public ExpendParameter Mp { get { return mp; } }
 
         public void SetUnitStatusSetting(UnitStatusSetting unitStatusSetting)
         {
-            unitHp = new UnitHp(unitStatusSetting.MaxHp);
-            unitMp = new UnitMp(unitStatusSetting.MaxMp);
+            hp = new ExpendParameter(unitStatusSetting.MaxHp);
+            mp = new ExpendParameter(unitStatusSetting.MaxMp);
         }
     }
 }
