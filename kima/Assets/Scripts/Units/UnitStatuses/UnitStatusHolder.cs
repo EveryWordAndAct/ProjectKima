@@ -6,13 +6,15 @@ namespace Kima.Units.Statuses
     public class UnitStatusHolder : MonoBehaviour
     {
         [SerializeField]
-        private int maxHp = 0;
+        private UnitHp unitHp;
         [SerializeField]
         private int maxMp = 0;
 
+        public UnitHp UnitHp { get { return unitHp; } }
+
         public void SetUnitStatusSetting(UnitStatusSetting unitStatusSetting)
         {
-            maxHp = unitStatusSetting.MaxHp;
+            unitHp = new UnitHp(unitStatusSetting.MaxHp);
             maxMp = unitStatusSetting.MaxMp;
         }
     }
