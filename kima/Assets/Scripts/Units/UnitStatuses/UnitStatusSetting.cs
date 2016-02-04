@@ -3,7 +3,7 @@
 namespace Kima.Units.Statuses
 {
     [CreateAssetMenu(fileName = "new Unit Setting", menuName = "ScriptableObjests/UnitStatusSetting")]
-    public class UnitStatusSetting
+    public class UnitStatusSetting : ScriptableObject
     {
         [SerializeField]
         private int maxHp;

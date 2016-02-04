@@ -1,4 +1,5 @@
 ﻿using Kima.Objects;
+using Kima.Units.Statuses;
 using UnityEngine;
 
 namespace Kima.Units
@@ -22,8 +23,15 @@ namespace Kima.Units
 
             ObjectSpriteSetter.SetSprite(unitObject, unitSetting.Sprite);
             ObjectAnimatorControllerSetter.SetAniamtorController(unitObject, unitSetting.AnimatorController);
+            SetUnitStatus(unitObject, unitSetting.UnitStatusSetting);
 
             return unitObject;
+        }
+
+        private static void SetUnitStatus(GameObject unitObject, UnitStatusSetting unitStatusSetting)
+        {
+            var unitStatusHolder = unitObject.GetComponent<UnitStatusHolder>() ?? unitObject.AddComponent<UnitStatusHolder>();
+            unitStatusHolder.SetUnitStatusSetting(unitStatusSetting);
         }
     }
 }
