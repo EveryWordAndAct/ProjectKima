@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Kima.Units
 {
-    [CreateAssetMenu(fileName = "new Unit Setting", menuName = "UnitSetting")]
+    [CreateAssetMenu(fileName = "new Unit Setting", menuName = "ScriptableObjests/UnitSetting")]
     public class UnitSetting : ScriptableObject
     {
         [SerializeField]

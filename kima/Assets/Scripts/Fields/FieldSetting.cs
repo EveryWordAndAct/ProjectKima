@@ -4,7 +4,7 @@ using UnityEditor;
 
 namespace Kima.Fields
 {
-    [CreateAssetMenu(fileName = "new Field Setting", menuName = "FieldSetting")]
+    [CreateAssetMenu(fileName = "new Field Setting", menuName = "ScriptableObjests/FieldSetting")]
     public class FieldSetting : ScriptableObject
     {
         [SerializeField]
